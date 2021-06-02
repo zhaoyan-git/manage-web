@@ -187,6 +187,18 @@ export const asyncRoutes = [
     ]
   },
   {
+    path: '/sensor-mng',
+    component: Layout,
+    children: [
+      {
+        path: 'index',
+        component: () => import('@/views/sensor-mng/index'),
+        name: 'SensorMng',
+        meta: { title: '传感器管理', icon: 'tree-table', roles: ['dev', 'manage'] }
+      }
+    ]
+  },
+  {
     path: '/permission',
     component: Layout,
     redirect: '/permission/page',
