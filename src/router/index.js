@@ -199,6 +199,18 @@ export const asyncRoutes = [
     ]
   },
   {
+    path: '/threshold-mng',
+    component: Layout,
+    children: [
+      {
+        path: 'index',
+        component: () => import('@/views/threshold-mng/index'),
+        name: 'ThresholdMng',
+        meta: { title: '自动锁定阈值管理', icon: 'tree-table', roles: ['dev', 'manage'] }
+      }
+    ]
+  },
+  {
     path: '/permission',
     component: Layout,
     redirect: '/permission/page',
